@@ -40,8 +40,8 @@ Quando iniciar, a API estará disponível em `http://localhost:8080`.
 
     ```json
     {
+      "nome": "Maria Silva",
       "email": "usuario@example.com",
-      "senha": "senha123",
       "ativo": true
     }
     ```

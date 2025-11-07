@@ -43,8 +43,8 @@ public class UserService {
         });
 
         User user = new User();
+        user.setNome(request.nome());
         user.setEmail(request.email());
-        user.setSenha(request.senha());
         user.setAtivo(request.ativo());
 
         User saved = userRepository.save(user);
@@ -52,6 +52,6 @@ public class UserService {
     }
 
     private UserResponse toResponse(User user) {
-        return new UserResponse(user.getId(), user.getEmail(), user.getAtivo());
+        return new UserResponse(user.getId(), user.getNome(), user.getEmail(), user.getAtivo());
     }
 }
